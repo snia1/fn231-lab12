@@ -87,7 +87,7 @@
     <script>
         get_doctor_api();
         function get_doctor_api() {
-            fetch('https://vercel.com/snia231s-projects/231bn-lab11/getDoctors')
+            fetch('https://231bn-lab11.vercel.app//getDoctors')
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('Network response was not ok');
@@ -128,7 +128,7 @@
             document.getElementById('FormModalLabel').innerHTML = "แก้ไขข้อมูลแพทย์";
             document.getElementById('edit_type').value="update";
             document.getElementById('form_docter_id').style.display = "block";
-            fetch('https://vercel.com/snia231s-projects/231bn-lab11/getDoctor/'+id)
+            fetch('https://231bn-lab11.vercel.app//getDoctor/'+id)
                 .then(response => {
                     if (!response.ok) {
                         throw new Error('Network response was not ok');
@@ -160,7 +160,7 @@
             if (doctor_name_f.trim() == "" || doctor_phone_f.trim() == "") {
                 alert("กรุณากรอกข้อมูลให้ถูกต้อง");
             } else {
-                const apiUrl = (edit_type_f=="new")?'https://vercel.com/snia231s-projects/231bn-lab11/addDoctor':"https://vercel.com/snia231s-projects/231bn-lab11/editDoctor";
+                const apiUrl = (edit_type_f=="new")?'https://231bn-lab11.vercel.app//addDoctor':"https://231bn-lab11.vercel.app//editDoctor";
                 
                 const data = {
                     doctor_id:doctor_ID_f,
